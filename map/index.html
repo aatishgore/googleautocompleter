@@ -1,0 +1,19 @@
+<html>
+<head>
+	<script src="http://foodie.php-dev.in/public/js/jquery-1.7.1.min.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
+	<script type="text/javascript" src="map.js"></script>
+</head>
+<body>
+	<input type="text" id="location" />
+	<input type="text" id="lat" />
+	<input type="text" id="lng" />
+	<input type="text" id="location2" />
+	<script type="text/javascript">
+	$(document).ready(function(){
+		$('#location').googleAutocomplete({"latitudeSelector":"#lat","longitudeSelector":"#lng"});
+		$('#location2').googleAutocomplete();
+	});
+	</script>
+</body>
+</html>
